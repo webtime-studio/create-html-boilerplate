@@ -18,32 +18,31 @@
     <li>Картинки и т.д.</li>
   </ul>
 </p>
-<section class="container">
-  <h2>Файловая структура</h2>
-  <code>
-    <pre>
-    source/
-      fonts/                - папка с подключаемыми шрифтами
-      html/                 – HTML
-        includes/           – блоки
-        views/              – страницы
-      img/                  - картинки
-      js/                   - JavaScript
-      scss/                 - стили
-        blocks/               – блоки
-        font-face.scss        - подключение шрифтов
-        global.scss           - глобальные стили
-        style.scss            - подключение всех стилей проекта
-        variables.scss        - SCSS переменные (цвета, размеры, шрифты)
-      vendors/
-        normalize-css/
-          normalize.min.css - нормализация стилей по-умолчанию
 
-    .editorconfig           - настройки редактора кода
-    .eslitrc.js             - настройки JS линтера
+## Файловая структура
+  
+```
+source/
+fonts/                - папка с подключаемыми шрифтами
+html/                 – HTML
+  includes/           – блоки
+  views/              – страницы
+img/                  - картинки
+js/                   - JavaScript
+scss/                 - стили
+  blocks/               – блоки
+  font-face.scss        - подключение шрифтов
+  global.scss           - глобальные стили
+  style.scss            - подключение всех стилей проекта
+  variables.scss        - SCSS переменные (цвета, размеры, шрифты)
+vendors/
+  normalize-css/
+    normalize.min.css - нормализация стилей по-умолчанию
 
-  </code>
-</section>
+
+.editorconfig           - настройки редактора кода
+.eslitrc.js             - настройки JS линтера
+```
 
 ## Зависимости
 

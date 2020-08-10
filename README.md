@@ -51,7 +51,11 @@
 
 ## Что под капотом
 
-- node ^10.18
+- Webpack
+- SCSS
+- JS с Babel
+- Stylelint, Eslint
+- Prettier, Husky, lint-staged – для автоформатирования и пре-коммит проверки
 
 ## Установка
 

@@ -1,0 +1,19 @@
+.header {
+  background-color: $white;
+  margin: 0;
+}
+
+.nav {
+  background-color: $gray;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__logo {
+  align-items: center;
+  display: flex;
+
+  img {
+    width: 100px;
+  }
+}

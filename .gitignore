@@ -1,0 +1,14 @@
+# Файлы и папки операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы редактора
+.idea
+*.sublime*
+.vscode
+.prettierignore
+
+# Вспомогательные файлы
+*.log*
+node_modules/
+build/

@@ -1,0 +1,51 @@
+{
+  "name": "create-html-boilerplate",
+  "version": "1.0.0",
+  "description": "elkiboom.ru - New Design (2020)",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/scss/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "webpack -p",
+    "postbuild": "",
+    "start": "webpack-dev-server --open"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/scss/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "^10.16"
+  },
+  "dependencies": {
+    "autoprefixer": "9.8.6"
+  },
+  "devDependencies": {
+    "babel-loader": "8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "6.0.3",
+    "css-loader": "4.2.1",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "html-webpack-plugin": "^4.3.0",
+    "imagemin-webp-webpack-plugin": "3.3.2",
+    "imagemin-webpack-plugin": "2.4.2",
+    "mini-css-extract-plugin": "0.9.0",
+    "node-sass": "4.14.1",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "postcss-loader": "3.0.0",
+    "raw-loader": "4.0.1",
+    "sass-loader": "9.0.3",
+    "stylelint": "13.6.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "terser-webpack-plugin": "4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  }
+}

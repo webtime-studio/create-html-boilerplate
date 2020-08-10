@@ -1,0 +1,8 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="784 340 283 171">
+  <g class="logo__item__inner" transform="translate(785.703125 502.868959395649) scale(1 1) rotate(0 0 0)"></g>
+  <g class="logo__item__inner" transform="translate(855.6981411858558 333) scale(0.48959274874411557 0.48959274874411557) rotate(0 0 0)">
+    <path fill="#FFB900" d="M186.1,77.5c0,0-136.9,0.7-165.2,128.6c0,0,65.3-89.2,156.3-60.2C177.1,146,194.4,114.9,186.1,77.5z" data-part-id="logo__item--logo_0__0"></path>
+    <path fill="#32D23E" d="M188.4,22.2c0,0,97.3,74.7,35.8,208.8c0,0-36.6-10.4-56-42.2C168.1,188.8,234.9,137.7,188.4,22.2z" data-part-id="logo__item--logo_0__1"></path>
+    <path fill="#128CE2" d="M65.8,182.6c0,0,29-24.9,64.3-25.6c0,0,15.9,93.3,132.1,100.9C262.1,258,150.8,306.4,65.8,182.6z" data-part-id="logo__item--logo_0__2"></path>
+  </g>
+</svg>

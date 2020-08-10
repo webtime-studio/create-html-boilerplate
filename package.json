@@ -20,13 +20,11 @@
     "./*.{js}": [
       "prettier --write",
       "eslint --fix",
-      "eslint",
-      "git add"
+      "eslint"
     ],
     "./*.{scss}": [
       "prettier --write",
-      "stylelint",
-      "git add"
+      "stylelint"
     ]
   },
   "engines": {

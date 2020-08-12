@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "create-html-boilerplate",
   "scripts": {
-    "stylelint": "stylelint '@(source)/scss/**/*.@(scss|css)'",
-    "eslint": "eslint '@(source)/js/**/*.js'",
+    "stylelint": "stylelint 'source/scss/**/*.(scss|css)'",
+    "eslint": "eslint 'source/js/**/*.js'",
     "test": "concurrently npm:stylelint npm:eslint",
     "build": "webpack -p",
     "postbuild": "",
-    "prettier": "prettier --write '@(source)/{scss,js}/**/*.@(scss|css|js|json)'",
+    "prettier": "prettier --write 'source/(scss|js)/**/*.(scss|css|js|json)'",
     "start": "webpack-dev-server --open"
-  },  
+  },
   "engines": {
     "node": "^10.16"
   },

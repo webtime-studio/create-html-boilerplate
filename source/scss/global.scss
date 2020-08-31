@@ -1,5 +1,4 @@
-html,
-body {
+html {
   box-sizing: border-box;
 }
 
@@ -7,22 +6,6 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-img {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  position: absolute;
-  width: 1px;
 }
 
 body {
@@ -34,4 +17,12 @@ body {
   line-height: 20px;
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,12 +1,14 @@
-// sizes
+/* Здесь хранятся все переменные стилей проекта. Указанные ниже переменные приведены в качестве демонстрации. */
+
+// Размеры вьюпорта
 $sm: 320px;
 $md: 768px;
 $xl: 1280px;
 
-// colors
+// Цвета
 $black: #000;
 $white: #fff;
-$gray: #ccc;
+$grey: #ccc;
 
-//fonts
-$main-font: "Ubuntu", "Arial", sans-serif;
+// Шрифты
+$main-font: "Roboto", "Arial", sans-serif;

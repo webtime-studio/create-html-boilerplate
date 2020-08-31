@@ -1,6 +1,11 @@
+/* Это точка входа для всех стилей. Подключите сюда все файлы стилей, которые должны быть на странице.*/
+
 @import "font-face";
 @import "variables";
 @import "global";
+
+@import "blocks/visually-hidden";
 @import "blocks/container";
 @import "blocks/header";
+@import "blocks/nav";
 @import "blocks/logo";

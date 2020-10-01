@@ -39,7 +39,8 @@ module.exports = {
   mode: isProd ? 'production' : 'development',
   entry: {
     bundle: './source/js/index.js',
-    style: './source/scss/style.scss',
+    libs: ['picturefill'],
+    style: './source/scss/style.scss'
   },
   devtool: 'inline-source-map',
   devServer: {

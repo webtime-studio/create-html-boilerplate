@@ -1,6 +1,6 @@
 <h1 align="center">Create HTML boilerplate</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-green.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.2.0-green.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%5E10.18-green.svg" />
 </p>
 

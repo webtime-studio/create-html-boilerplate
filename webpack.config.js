@@ -42,7 +42,7 @@ module.exports = {
   entry: {
     bundle: './source/js/index.js',
     libs: ['picturefill'],
-    style: './source/scss/style.scss'
+    style: './source/scss/style.scss',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -104,7 +104,7 @@ module.exports = {
     }),
     new PreloadWebpackPlugin({
       rel: 'preload',
-      include: 'allAssets', // or 'initial', or 'allAssets'
+      include: 'allChunks', // or 'initial', or 'allAssets'
     }),
     new CopyWebpackPlugin({
       patterns: [

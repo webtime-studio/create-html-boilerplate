@@ -10,6 +10,8 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const isProd = process.argv.indexOf('-p') !== -1;
 
@@ -40,7 +42,7 @@ module.exports = {
   entry: {
     bundle: './source/js/index.js',
     libs: ['picturefill'],
-    style: './source/scss/style.scss'
+    style: './source/scss/style.scss',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -72,6 +74,11 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [['autoprefixer']],
+              },
+            },
           },
           {
             loader: 'sass-loader',
@@ -88,11 +95,16 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
+    new SpriteLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].min.css',
     }),
     new HtmlWebpackPlugin({
       template: 'source/html/views/index.html',
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      include: 'allChunks', // or 'initial', or 'allAssets'
     }),
     new CopyWebpackPlugin({
       patterns: [

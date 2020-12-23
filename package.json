@@ -1,6 +1,6 @@
 {
   "name": "create-html-boilerplate",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "create-html-boilerplate",
   "scripts": {
     "stylelint": "stylelint \"source/scss/**/*.(scss|css)\"",

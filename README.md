@@ -38,7 +38,7 @@ source/
     variables.scss      - SCSS переменные (цвета, размеры, шрифты)
   vendors/
     normalize-css/
-      normalize.min.css - нормализация стилей по-умолчанию
+      normalize.min.css - нормализация стилей по умолчанию
 webpack/
   webpack.config.js     - конфиг для webpack
 .editorconfig           - настройки редактора кода

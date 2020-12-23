@@ -1,0 +1,9 @@
+{
+  "name": "create-html-boilerplate",
+  "short_name": "create-html-boilerplate",
+  "theme_color": "#cc5803",
+  "background_color": "#cc5803",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/"
+}

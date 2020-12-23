@@ -35,9 +35,14 @@ function generateHtmlPlugins(templateDir) {
   });
 }
 
-const htmlPlugins = generateHtmlPlugins('./source/html/views');
+const htmlPlugins = generateHtmlPlugins('../source/html/views');
 
 module.exports = {
+  resolve: {
+    alias: {
+      source: '../source',
+    },
+  },
   mode: isProd ? 'production' : 'development',
   entry: {
     bundle: './source/js/index.js',
@@ -87,7 +92,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        include: path.resolve(__dirname, 'source/html/includes'),
+        include: path.resolve(__dirname, '../source/html/includes'),
         use: ['raw-loader'],
       },
     ],
@@ -108,17 +113,25 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
+        /* Копируем шрифты */
         {
-          from: './source/fonts',
+          from: 'source/fonts',
           to: './fonts',
         },
+        /* Копируем изображения */
         {
-          from: './source/img',
+          from: 'source/img',
           to: './img',
         },
+        /* Копируем внешние библиотеки */
         {
-          from: './source/vendors',
+          from: 'source/vendors',
           to: './vendors',
+        },
+        /* Копируем файлы, которые необходимы нам в корне проекта */
+        {
+          from: 'source/root',
+          to: './',
         },
       ],
     }),
@@ -144,7 +157,7 @@ module.exports = {
   ].concat(htmlPlugins),
   output: {
     filename: 'js/[name].js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '../build'),
   },
   optimization: {
     minimize: true,

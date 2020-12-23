@@ -25,7 +25,7 @@ myApp
 ├── .github
 │   ├── bug_report.md              - шаблон для создания issue
 │   └── feature_request.md         - шаблон для создания запроса на улучшение
-├── source
+├── source                         - все основные файлы, которые вам нужны
 │   ├── fonts                      - папка с подключаемыми шрифтами
 │   ├── html                       – HTML
 │   │   ├── includes/              – блоки
@@ -39,21 +39,20 @@ myApp
 │   │   ├── global.scss            - глобальные стили
 │   │   ├── style.scss             – подключение всех стилей проекта
 │   │   └── variables.scss         - SCSS переменные (цвета, размеры, шрифты)
-│   └── vendors
-│       └── normalize-css/
-│           └── normalize.min.css  - нормализация стилей по умолчанию
-├── webpack
+│   └── vendors                    - папка для внешних скриптов и библиотек
+│       └── normalize-css/         - нормализация стилей по умолчанию (https://necolas.github.io/normalize.css/)
+│           └── normalize.min.css  - минифицированный файл
+├── webpack                        - папка для webpack конфигураций
 │   └── webpack.config.js          - конфиг для webpack
 ├── .editorconfig                  - настройки редактора кода
 ├── .eslintrc.js                   - настройки JS линтера
-├── .gitattributes
+├── .gitattributes                 - технический файл для Git
 ├── .gitignore                     - файлы/папки игнорируемые Git
 ├── .prettierrc                    - настройки Prettier
 ├── .stylelintrc.js                - настройки Stylelint
-├── LICENSE
-├── package-lock.json
-├── package.json
-└── README.md
+├── LICENSE                        - лицензия проекта (MIT)
+├── package.json                   - зависимости, скрипты и базовая информация
+└── README.md                      - описание проекта
 ```
 
 ## Зависимости

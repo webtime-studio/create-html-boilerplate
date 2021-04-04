@@ -1,9 +1,6 @@
 const path = require('path');
-const fs = require('fs');
-
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
@@ -12,35 +9,52 @@ const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const generateHtmlPlugins = require('./helpers/generateHtmlPlugins');
 
+/**
+ * Получает root директорию проекта.
+ * @type {string}
+ */
+const projectRootDir = process.cwd();
+/**
+ * Текущая версия проекта из package.json
+ * @type {string}
+ */
+const version = require('../package.json').version;
+/**
+ * Кастомный title для сайта
+ * @type {string}
+ */
+const title = 'Create HTML Boilerplate';
+/**
+ * Директория с шаблонами
+ * @type {string}
+ */
+const templatesPath = path.join(projectRootDir, 'source', 'html', 'views');
+/**
+ * Базовый конфиг для сайта
+ * templatesPath – путь для HTML шаблонов (обязательный параметр)
+ * options – любые данные которые необходимы в шаблоне (опциональный параметр)
+ * @type {{templatesPath: string, options: {[key]: string | number | any }}}
+ */
+const config = {
+  templatesPath,
+  options: {
+    version,
+    title,
+  },
+};
+/**
+ * Определяет в каком режиме работает сборка – девелопмент или продакшн.
+ * @type {boolean}
+ */
 const isProd = process.argv.indexOf('-p') !== -1;
-
-function generateHtmlPlugins(templateDir) {
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-  const htmlFiles = templateFiles.filter(templateFile => {
-    const parts = templateFile.split('.');
-    return parts[1] === 'html';
-  });
-
-  return htmlFiles.map(htmlFile => {
-    const parts = htmlFile.split('.');
-    const name = parts[0];
-    const extension = parts[1];
-
-    return new HtmlWebpackPlugin({
-      filename: `${name}.html`,
-      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-      inject: true,
-    });
-  });
-}
-
-const htmlPlugins = generateHtmlPlugins('../source/html/views');
+const htmlPlugins = generateHtmlPlugins(config);
 
 module.exports = {
   resolve: {
     alias: {
-      source: '../source',
+      source: path.join('..', 'source'),
     },
   },
   mode: isProd ? 'production' : 'development',
@@ -51,7 +65,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'source/'),
+    contentBase: path.join(projectRootDir, 'source/'),
     port: 9001,
     hot: true,
     compress: true,
@@ -103,9 +117,6 @@ module.exports = {
     new SpriteLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].min.css',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'source/html/views/index.html',
     }),
     new PreloadWebpackPlugin({
       rel: 'preload',

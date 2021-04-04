@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="description" content="HTML5 webpack boilerplate" />
-    <title>HTML5 webpack boilerplate</title>
-    <link rel="stylesheet" href="/vendors/normalize-css/normalize.min.css" />
-    <script>
-      if(!window.HTMLPictureElement) {
-        document.createElement("picture");
-      };
-    </script>
-  </head>
-  <body>
-    <!--header.html-->
-    <%= _.template(require('../includes/common/header.html').default)({}) %>
-    <main>
-      <!--index/hero.html-->
-      <%= _.template(require('../includes/index/hero.html').default)({}) %>
-      <!--index/structure.html-->
-      <%= _.template(require('../includes/index/structure.html').default)({}) %>
-    </main>
-    <!--footer.html-->
-    <%= _.template(require('../includes/common/footer.html').default)({}) %>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="HTML5 webpack boilerplate" />
+  <title>HTML5 webpack boilerplate</title>
+  <link rel="stylesheet" href="/vendors/normalize-css/normalize.min.css" />
+  <script>
+    if (!window.HTMLPictureElement) {
+      document.createElement('picture');
+    }
+  </script>
+</head>
+<body>
+<!--header.html-->
+<%= _.template(require('../includes/common/header.html').default)({}) %>
+<main>
+  <!--index/hero.html-->
+  <%= _.template(require('../includes/index/hero.html').default)({
+    version: htmlWebpackPlugin.options.custom.version,
+  }) %>
+  <!--index/structure.html-->
+  <%= _.template(require('../includes/index/structure.html').default)({}) %>
+</main>
+<!--footer.html-->
+<%= _.template(require('../includes/common/footer.html').default)({}) %>
+</body>
 </html>

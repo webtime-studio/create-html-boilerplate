@@ -1,14 +1,14 @@
 <h1 align="center">Create HTML boilerplate</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.3.1-green.svg?cacheSeconds=2592000" />
-  <img src="https://img.shields.io/badge/node-%5E10.18-green.svg" />
+  <img alt="Версия проекта" src="https://img.shields.io/badge/version-1.4.0-green.svg?cacheSeconds=2592000" />
+  <img alt="Минимально необходимая версия NodeJS" src="https://img.shields.io/badge/node-%5E10.18-green.svg" />
 </p>
 
 <p>Привет! Спасибо за то что используете наш Create HTML boilerplate.</p>
 <p>
   Данная сборка вдохновлена проектом с хабра и многими часами вёрстки и
   разработки. Здесь специально нет ничего лишнего и только набор базовых
-  файлов, чтобы было понятно как построить базовую структуру проекта
+  файлов, чтобы было понятно как построить базовую структуру.
 </p>
 <ul>
   <li>HTML</li>
@@ -48,7 +48,7 @@ myApp
 │   │   └── logo.svg                 - лого проекта
 │   │
 │   ├── js                           - скрипты сайта
-│   │   └── index.js                 - точка входа для скриптов
+│   │   ├── index.js                 - точка входа для скриптов
 │   │   └── script.js                - пример импортируемого модуля
 │   │
 │   ├── root                         - файлы, которые будут лежать в корне проекта
@@ -71,7 +71,9 @@ myApp
 │       └── normalize-css/           - нормализация стилей по умолчанию (https://necolas.github.io/normalize.css/)
 │           └── normalize.min.css    - минифицированный файл
 │
-├── webpack                          - папка для конфигураций webpack 
+├── webpack                          - папка для конфигураций webpack
+│   ├── helpers                      - папка с вспомоготельными функциями  
+│   │   └── generateHtmlPlugins.js   - генерация настроек для шаблонов 
 │   └── webpack.config.js            - конфиг для webpack
 │
 ├── .editorconfig                    - настройки для редактора кода

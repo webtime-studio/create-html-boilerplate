@@ -1,21 +1,21 @@
 {
   "name": "create-html-boilerplate",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "create-html-boilerplate",
   "scripts": {
-    "stylelint": "stylelint \"source/scss/**/*.(scss|css)\"",
-    "eslint": "eslint \"source/js/**/*.js\"",
+    "start": "webpack-dev-server --config webpack/webpack.config.js --open",
     "test": "concurrently npm:stylelint npm:eslint",
     "build": "webpack --progress --config webpack/webpack.config.js -p",
-    "prettier": "prettier --write \"source/(scss|js)/**/*.(scss|css|js|json)\"",
-    "start": "webpack-dev-server --config webpack/webpack.config.js --open"
+    "stylelint": "stylelint \"source/scss/**/*.(scss|css)\"",
+    "eslint": "eslint \"source/js/**/*.js\"",
+    "prettier": "prettier --write \"source/(scss|js)/**/*.(scss|css|js|json)\""
   },
   "dependencies": {
-    "concurrently": "^6.0.0",
+    "concurrently": "^6.2.0",
     "picturefill": "^3.0.3"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.4.1",

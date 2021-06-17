@@ -26,3 +26,19 @@ img {
 a {
   text-decoration: none;
 }
+
+h1 {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+pre {
+  overflow-x: auto;
+  font-size: 16px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgb(204, 89, 6);
+  background-color: #252525;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px 0 15px 0;
+}

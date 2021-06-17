@@ -1,14 +1,23 @@
 .nav {
   display: flex;
-  justify-content: center;
-  padding: 20px 0;
+  justify-content: left;
+}
+
+.nav__link {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.nav__title {
+  color: #cc5906;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .nav__logo {
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 100px;
-  }
+  width: 50px;
+  margin-right: 20px;
 }

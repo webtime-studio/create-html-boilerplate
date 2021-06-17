@@ -15,12 +15,10 @@
 </head>
 <body>
 <!--header.html-->
-<%= _.template(require('../includes/common/header.html').default)({}) %>
+<%= _.template(require('../includes/common/header.html').default)({version: htmlWebpackPlugin.options.custom.version,}) %>
 <main>
   <!--index/hero.html-->
-  <%= _.template(require('../includes/index/hero.html').default)({
-    version: htmlWebpackPlugin.options.custom.version,
-  }) %>
+  <%= _.template(require('../includes/index/hero.html').default)({}) %>
   <!--index/structure.html-->
   <%= _.template(require('../includes/index/structure.html').default)({}) %>
 </main>

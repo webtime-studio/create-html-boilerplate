@@ -65,12 +65,9 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(projectRootDir, 'source/'),
     port: 9001,
     hot: true,
     compress: true,
-    progress: true,
-    watchContentBase: true,
   },
   module: {
     rules: [

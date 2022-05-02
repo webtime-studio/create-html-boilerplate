@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const generateHtmlPlugins = require('./helpers/generateHtmlPlugins');
@@ -179,7 +178,6 @@ module.exports = {
             parallel: true,
             sourceMap: false,
           }),
-          new OptimizeCSSAssetsPlugin({}),
         ]
       : [],
   },

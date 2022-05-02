@@ -48,7 +48,7 @@ const config = {
  * Определяет в каком режиме работает сборка – девелопмент или продакшн.
  * @type {boolean}
  */
-const isProd = process.argv.indexOf('-p') !== -1;
+const isProd = process.argv.mode === 'production';
 const htmlPlugins = generateHtmlPlugins(config);
 
 module.exports = {

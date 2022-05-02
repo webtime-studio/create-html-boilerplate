@@ -1,12 +1,12 @@
 {
   "name": "create-html-boilerplate",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "description": "create-html-boilerplate",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.config.js --open",
     "test": "concurrently npm:stylelint npm:eslint",
-    "build": "webpack --progress --config webpack/webpack.config.js -p",
-    "stylelint": "stylelint \"source/scss/**/*.(scss|css)\"",
+    "build": "webpack --progress --config webpack/webpack.config.js --mode production",
+    "stylelint": "stylelint \"source/scss/**/*.(scss|css)\" --custom-syntax postcss-scss",
     "eslint": "eslint \"source/js/**/*.js\"",
     "prettier": "prettier --write \"source/(scss|js)/**/*.(scss|css|js|json)\""
   },
@@ -15,8 +15,8 @@
     "picturefill": "^3.0.3"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.5",
     "@babel/core": "^7.17.10",
+    "autoprefixer": "^10.4.5",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.2.4",
@@ -34,6 +34,7 @@
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss": "^8.4.13",
     "postcss-loader": "^6.2.1",
+    "postcss-scss": "^4.0.4",
     "preload-webpack-plugin": "^3.0.0-beta.4",
     "prettier": "^2.6.2",
     "raw-loader": "^4.0.2",

@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const generateHtmlPlugins = require('./helpers/generateHtmlPlugins');
@@ -48,7 +47,7 @@ const config = {
  * Определяет в каком режиме работает сборка – девелопмент или продакшн.
  * @type {boolean}
  */
-const isProd = process.argv.indexOf('-p') !== -1;
+const isProd = process.argv.mode === 'production';
 const htmlPlugins = generateHtmlPlugins(config);
 
 module.exports = {
@@ -65,12 +64,9 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(projectRootDir, 'source/'),
     port: 9001,
     hot: true,
     compress: true,
-    progress: true,
-    watchContentBase: true,
   },
   module: {
     rules: [
@@ -182,7 +178,6 @@ module.exports = {
             parallel: true,
             sourceMap: false,
           }),
-          new OptimizeCSSAssetsPlugin({}),
         ]
       : [],
   },

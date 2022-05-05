@@ -67,6 +67,7 @@ module.exports = {
     port: 9001,
     hot: true,
     compress: true,
+    watchFiles: ['source/**'],
   },
   module: {
     rules: [

@@ -1,6 +1,6 @@
 {
   "name": "create-html-boilerplate",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Boilerplate for creating modular websites with HTML, SCSS and JavaScript without any headache",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.config.js --open",
@@ -21,7 +21,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
-    "eslint": "^8.14.0",
+    "eslint": "^8.18.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",

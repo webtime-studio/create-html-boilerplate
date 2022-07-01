@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const generateHtmlPlugins = require('./helpers/generateHtmlPlugins');
 
@@ -114,10 +113,6 @@ module.exports = {
     new SpriteLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].min.css',
-    }),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      include: 'allChunks', // or 'initial', or 'allAssets'
     }),
     new CopyWebpackPlugin({
       patterns: [

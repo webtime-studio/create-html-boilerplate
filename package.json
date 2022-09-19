@@ -4,7 +4,7 @@
   "description": "Boilerplate for creating modular websites with HTML, SCSS and JavaScript without any headache",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.config.js --open",
-    "test": "concurrently npm:stylelint npm:eslint",
+    "lint": "concurrently npm:stylelint npm:eslint",
     "build": "webpack --progress --config webpack/webpack.config.js --mode production",
     "stylelint": "stylelint \"source/scss/**/*.(scss|css)\" --custom-syntax postcss-scss",
     "eslint": "eslint \"source/js/**/*.js\"",
@@ -47,7 +47,7 @@
     "svgo": "^2.8.0",
     "svgo-loader": "^3.0.1",
     "terser-webpack-plugin": "^5.3.3",
-    "webpack": "^5.73.0",
+    "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
   }

@@ -1,6 +1,6 @@
 <h1 align="center">Create HTML boilerplate</h1>
 <p>
-  <img alt="Версия проекта" src="https://img.shields.io/badge/version-2.0.3-green.svg?cacheSeconds=2592000" />
+  <img alt="Версия проекта" src="https://img.shields.io/badge/version-2.0.4-green.svg?cacheSeconds=2592000" />
   <img alt="Минимально необходимая версия NodeJS" src="https://img.shields.io/badge/node-%5E16-green.svg" />
 </p>
 
@@ -92,7 +92,7 @@ myApp
 
 ## Зависимости
 
-- node ^10
+- node ^16
 
 ## Что под капотом
 

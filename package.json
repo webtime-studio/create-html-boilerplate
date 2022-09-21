@@ -1,6 +1,6 @@
 {
   "name": "create-html-boilerplate",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Boilerplate for creating modular websites with HTML, SCSS and JavaScript without any headache",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.config.js --open",

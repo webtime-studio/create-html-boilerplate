@@ -42,7 +42,7 @@
     "stylelint-config-recommended-scss": "^8.0.0",
     "stylelint-config-standard": "^29.0.0",
     "stylelint-prettier": "^3.0.0",
-    "stylelint-scss": "^4.4.0",
+    "stylelint-scss": "^4.5.0",
     "svg-sprite-loader": "^6.0.11",
     "svgo": "^3.0.2",
     "svgo-loader": "^4.0.0",

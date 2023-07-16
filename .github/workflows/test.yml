@@ -9,14 +9,17 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 16, 18, 20 ]
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
-        node-version: '16'
-    - name: Install dependencies
+        node-version: ${{ matrix.node }}
+    - name: Install dependencies on ${{ matrix.node }}
       run: npm install --ci
-    - name: Lint
+    - name: Lint on ${{ matrix.node }}
       run: npm run lint
-    - name: Check if project builds
+    - name: Check if project builds on ${{ matrix.node }}
       run: npm run build

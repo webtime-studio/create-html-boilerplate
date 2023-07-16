@@ -17,9 +17,9 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node }}
-    - name: Install dependencies on ${{ matrix.node }}
+    - name: Install dependencies on Node v${{ matrix.node }}
       run: npm install --ci
-    - name: Lint on ${{ matrix.node }}
+    - name: Lint on Node v${{ matrix.node }}
       run: npm run lint
-    - name: Check if project builds on ${{ matrix.node }}
+    - name: Check if project builds on Node v${{ matrix.node }}
       run: npm run build

@@ -1,7 +1,12 @@
 {
   "name": "create-html-boilerplate",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Boilerplate for creating modular websites with HTML, SCSS and JavaScript without any headache",
+  "author": {
+    "name": "Pavel Klochkov",
+    "email": "paul.klochkov@gmail.com"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.config.js --open",
     "lint": "concurrently npm:stylelint npm:eslint",
